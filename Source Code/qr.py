@@ -1,7 +1,9 @@
+# Libraries
 from qrcode import ERROR_CORRECT_L
 from qrcode.main import QRCode
 
 
+# Classes
 class QrCodeGenerator:
     def __init__(
         self,
@@ -28,5 +30,6 @@ class QrCodeGenerator:
         self.qrCode = QRCode(error_correction=ERROR_CORRECT_L)
 
 
+# Main program
 if __name__ == "__main__":
     pass
