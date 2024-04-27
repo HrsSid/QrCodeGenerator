@@ -45,10 +45,10 @@ class QrCodeGenerator:
         if fileName == "":
             fileName = "qrcode"
         # example -> fileName=".png" (<- No name but correct extension) -> fileName="qrcode"
-        if fileName.split(".")[0] == "":
+        if fileName.split(".")[0] == "": # even if there is no `.` in the file name, it will still work
             fileName = "qrcode"
         # example -> fileName="qrcode.jpg" -> fileName="qrcode.jpg.png" (The last extension is the one that matters)
-        if fileName.split(".")[1] != "png":
+        if "png" not in fileName:
             fileName += ".png"
         return fileName  # returns the corrected file name (if correction were made, otherwise returns the original name given)
 
@@ -65,19 +65,20 @@ class QrCodeGenerator:
 
 # Putting everything together
 if __name__ == "__main__":
-    arguments = sys.argv  # command syntax: python qr.py {content}
+    arguments = sys.argv  # command syntax: python qr.py {content} {fileName}
     arguments = arguments[1:]  # removing the file path from the arguments (because it isn't an argument xD)
     # checking if the arguments are correct
-    if len(arguments) == 0 or len(arguments) > 1:
+    if len(arguments) <= 0 or len(arguments) > 2:
         raise SyntaxError(
-            "missing argument {qrContent}"
+            "Invalid arguments, correct syntax: python qr.py {content} {fileName}"
         )  # raising an error if the arguments are not correct
     # generating the QR code
     qr = QrCodeGenerator(
-        qrContent=arguments[0]
+        qrContent=arguments[0],
+        qrFileName=arguments[1],
     )  # creating the qr class and passing the content argument
     qr.generate()  # generating and saving the QR code
 
 # VERSION: 1.0
-# Syntax: python qr.py {content}
+# Syntax: python qr.py {content} {fileName}
 # Made by Harry Sidiropoulos
