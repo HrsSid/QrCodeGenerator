@@ -16,7 +16,7 @@ $ python qr.py {content}
 
 # Installation
 
-**!! The program was created using python 3.10 so if you use any other version it might not work properly !!**
+**!! The program was created using `python 3.10` so if you use any other version it might not work properly !!**
 
 ```bash
 # Installing the dependencies
