@@ -79,6 +79,6 @@ if __name__ == "__main__":
     )  # creating the qr class and passing the content argument
     qr.generate()  # generating and saving the QR code
 
-# VERSION: 1.0
+# VERSION: 2.0
 # Syntax: python qr.py {content} {fileName}
 # Made by Harry Sidiropoulos
