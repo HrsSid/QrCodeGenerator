@@ -6,8 +6,6 @@ A terminal inline QR code generator.
     <div>
         <a src="https://perso.crans.org/besson/LICENSE.html"><img src="https://img.shields.io/badge/License-GPLv3-blue.svg"></a>
         <a src="https://github.com/HrsSid"><img src="https://img.shields.io/badge/Author-Hrssid-blue.svg">
-        <a src="https://GitHub.com/Hrssid/QrCodeGenerator/commit/"><img src="https://badgen.net/github/commits/Hrssid/QrCodeGenerator">
-        <a src="https://GitHub.com/Hrssid/QrCodeGenerator/commit/"><img src="https://badgen.net/github/last-commit/Hrssid/QrCodeGenerator">
     </div>
 </center>
 <!-- Header Image -->
